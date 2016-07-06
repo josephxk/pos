@@ -1,0 +1,84 @@
+<template name="store">
+    {{#autoForm collection="Stores" doc=formDoc id="storeForm" type=formType meteormethod=formMethod}}
+    <div class="box box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Store details</h3>
+        </div>
+        <div class="box-body">
+            {{> afQuickField name="name"}}
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="email"}}
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="customerEmail"}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Store address</h3>
+        </div>
+        <div class="box-body">
+            {{> afQuickField name="companyName"}}
+            {{> afQuickField name="phone"}}
+            {{> afQuickField name="address1"}}
+            {{> afQuickField name="address2"}}
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="city"}}
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="postal"}}
+                </div>
+            </div>
+            {{> afQuickField name="country" options=options}}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-default">Reset</button>
+    {{/autoForm}}
+</template>
+<!-- <template name="storeEdit">
+    {{#autoForm collection="StoresCollection" schema=storeFormSchema doc=this id="storeForm" type="update" }}
+    <div class="box box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Store details</h3>
+        </div>
+        <div class="box-body">
+            {{> afQuickField name="name"}}
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="email"}}
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="customerEmail"}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Store address</h3>
+        </div>
+        <div class="box-body">
+            {{> afQuickField name="companyName"}}
+            {{> afQuickField name="phone"}}
+            {{> afQuickField name="address1"}}
+            {{> afQuickField name="address2"}}
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="city"}}
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    {{> afQuickField name="postal"}}
+                </div>
+            </div>
+            {{> afQuickField name="country" options=options}}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-default">Reset</button>
+    {{/autoForm}}
+</template> -->

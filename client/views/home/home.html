@@ -1,0 +1,23 @@
+<template name="home">
+
+    <head>
+        <title>Login</title>
+    </head>
+    template: home
+</template>
+<template name="homeLayout">
+    {{> yield region='nav'}}
+    <div id="content">
+        {{> yield}}
+    </div>
+    {{> yield region='footer'}}
+</template>
+<template name="myNav">template: myNav</template>
+<template name="myFooter">template: myFooter</template>
+<template name="tplSignIn">template: tplSignIn {{>fullPageAtForm}} </template>
+<template name="tplSignUp">template: tplSignUp {{>fullPageAtForm}} </template>
+<template name="tplEnrollAccount">template: tplEnrollAccount {{>fullPageAtForm}} </template>
+<template name="tplChangePassword">template: tplChangePassword {{>fullPageAtForm}} </template>
+<template name="tplForgotPassword">template: tplForgotPassword {{>fullPageAtForm}} </template>
+<template name="tplResetPassword">template: tplResetPassword {{>fullPageAtForm}} </template>
+<template name="masterLayout">template: masterLayout</template>

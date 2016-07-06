@@ -1,0 +1,30 @@
+<template name="user">
+    {{#autoForm collection="Meteor.users" doc=this id="userForm" type="method-update" meteormethod="updateUser"}}
+    <div class="box box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">User details (ID: {{ _id }})</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                        {{>afQuickField name="profile.firstName"}}
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        {{>afQuickField name="profile.lastName"}}
+                    </div>
+                </div>
+                {{>afQuickField name="emails.0.address" placeholder="Not defined"}}
+                {{>afQuickField name="username" placeholder="Not defined"}}
+                {{>afQuickField name="emails.0.verified" type="boolean-radios" label="Email Status" trueLabel="Verified" falseLabel="Not Verified"}}
+                {{>afQuickField name="active" type="boolean-radios" label="Account Status" trueLabel="Active" falseLabel="Not Active"}}
+                {{>afQuickField name="createdAt" type="text" readonly=true}}
+            </div>
+        </form>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-default">Reset</button>
+    {{/autoForm}}
+</template>

@@ -1,1 +1,5 @@
+.idea/workspace.xml
+meteor/local/*
 node_modules/
+npm-debug.log
+packages/*/.npm/
